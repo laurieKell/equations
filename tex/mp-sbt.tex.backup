@@ -1,0 +1,58 @@
+CCSBT developed an MP where The TAC is an average of candidate TACs obtained from two harvest control rules \citep{hillary2013sbthcr}.
+
+
+In the first, the TAC is updated depending on the trend in an index ($I$)
+
+\begin{equation}
+ TAC^1_{y+1}=TAC_y\times \left\{\begin{array}{rcl}  {1-k_1|\lambda|^{\gamma}} & \mbox{for} & \lambda<0\\[0.35cm]
+{1+k_2\lambda} & \mbox{for} & \lambda\geq 0 
+    \end{array}\right.
+\end{equation}
+        
+
+where $\lambda$ is the slope in the regression of $\ln I_y$ against year for the most recent $n$ years. $k_1$ and $k_2$ are \textit{gain} parameters and $\gamma$ actions asymmetry so that decreases in the index do not result in the same relative change as as an increase.
+
+%giving 4 tunable parameters (\textbf{Table} \ref{tab1})
+
+The second HCR uses both a biomass and a juvenile index i.e.
+
+\begin{equation} 
+ \begin{align*}
+     TAC^2_{y+1} &= 0.5\times\left(TAC_y+C^{\rm targ}_y\Delta^R_y\right)\\
+ \end{align*}
+\end{equation}
+
+where 
+
+\begin{equation} 
+ \begin{align*}
+  C^{\rm targ}_y = 
+  \left\{\begin{array}{rcl} {\delta \left[\frac{B_{y}}{B^*}\right]^{1-\veps_b}} & \mbox{for} & B_{y}\geq B^*\\
+                            {\delta \left[\frac{B_{y}}{B^*}\right]^{1+\veps_b}} & \mbox{for} & B_{y}<B^* \\
+    \end{array}\right.
+ \end{align*}
+\end{equation}
+
+\begin{equation} 
+\Delta^R_y = \left\{\begin{array}{rcl}{\left[\frac{\bar{R}}{\mathcal{R}}\right]^{1-\veps_r}} & \mbox{for} & \bar{R}\geq\mathcal{R}\\[0.35cm]
+{\left[\frac{\bar{R}}{\mathcal{R}}\right]^{1+\veps_r}} & \mbox{for} & \bar{R}<\mathcal{R}
+\end{array}\right.
+\end{equation}
+
+
+
+ where $\delta$ is the \textit{target} catch; $B^*$ the \textit{target} CPUE (i.e. the mean observed CPUE corresponding to some 
+ multiple of a biomass reference point such as $B_0$ or $M_{MSY}$) and 
+$\bar{R}$ is the average recent juvenile biomass i.e.
+
+\begin{equation}
+    \bar{R}=\frac{1}{\tau_R}\sum\limits_{i=y-\tau_R+1}^{y}R_i
+ \end{equation}
+
+ 
+$\mathcal{R}$ is a ``limit'' level derived from the mean recruitment over a reference period; \\
+while $\veps[0,1]$ actions asymmetry so that increases in TAC do not occur at the same level as decreases.
+
+%There are therefore 5 tunable parameters, \textbf{Table} \ref{tab2}
+
+Reference points could also be used to set $\delta$ as well as $\mathcal{R}$. 

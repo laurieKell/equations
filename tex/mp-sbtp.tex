@@ -1,0 +1,20 @@
+A proportional control rule (P) is so called as the action is determined in proportion to the error between a signal and a reference value
+
+\begin{equation} 
+ %\begin{align*}
+  C^{\rm targ}_y = 
+  \left\{\begin{array}{rcl} 
+      {\delta \left[\frac{I_{y}}{I^*}\right]^{1-\veps_k1}} & \mbox{for} & I_{y}\geq I^*\\
+      {\delta \left[\frac{I_{y}}{I^*}\right]^{1+\veps_k2}} & \mbox{for} & I_{y}<I^* \\
+        \end{array}
+  \right.
+ %\end{align*}
+\end{equation}
+
+where $\delta$ is the target catch and $k_1$ and $k_2$ are the gain terms 
+
+The TAC is then the average of the last TAC and the value output by the HCR. 
+
+\begin{equation} 
+     TAC_{y+1} = 0.5\times\left(TAC_y+C^{\rm targ}_y\right)\\
+\end{equation}

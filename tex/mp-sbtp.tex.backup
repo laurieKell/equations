@@ -1,0 +1,11 @@
+\begin{equation} 
+ \begin{align*}
+  C^{\rm targ}_y &= \left\{\begin{array}{rcl}{\delta \left[\frac{B_{y}}{B^*}\right]^{1-\veps_b}} & \mbox{for} & B_{y}\geq B^*\\[0.35cm]
+{\delta \left[\frac{B_{y}}{B^*}\right]^{1+\veps_b}} & \mbox{for} & B_{y}<B^*
+    \end{array}\right.,\\
+ \end{align*}
+\end{equation}
+
+\begin{equation} 
+     TAC^2_{y+1} = 0.5\times\left(TAC_y+C^{\rm targ}_y\right)\\
+\end{equation}

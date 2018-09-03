@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{url,  multirow}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{algorithm}
+\usepackage{graphicx} 
+
+
+\begin{document}
+
+\begin{equation}
+\end{equation}
+\begin{equation}
+\end{equation}
+\begin{equation}
+\end{equation}
+
+\begin{equation}
+\bar{I_t}=rI_t+(1-r)\bar{I}_{t+1}
+\end{equation}
+ 
+\begin{equation}
+\bar{S} = \left\{ \begin{array}{ll}
+	0                   			  &\mbox{$\bar{I} < i_t$} \\
+	m\hat{S}            			  &\mbox{$\bar{I} > i_t$} \\
+	\frac{m\hat{S}}{i_t-i_l}(\bar{I}-i_l)     &\mbox{otherwise}\\
+		  \end{array}
+	  \right.
+\end{equation}
+
+
+\begin{equation}
+\bar{C}=min(\bar{S}\bar{I},u)
+\end{equation}
+
+\begin{equation}
+C_{t+1} = \bar{C}_\phi
+\end{equation}
+
+\begin{equation}
+\phi \sim LN(1,\veps)
+\end{equation}
+
+
+\input{/home/laurence/Desktop/flr/equations/mp-irate-table.tex}
+
+\end{document}

@@ -1,0 +1,24 @@
+\begin{table}[h]
+\centering
+\caption{iRate tunable parameters}
+\begin{tabular}{p{3cm}p{1.2cm}p{6cm}p{2cm}} 
+  \hline
+  Parameter & Symbol & Description & Default \\ 
+  \hline
+  Reference years   &$r$&    Years used when computing reference values            & 0.5 \\
+  Responsiveness    &$m$&    Target harvest rate relative to historic levels     
+  Target harvest             i.e 0.9 = 90\% of historic average                    & 0.9 \\
+  Threshold index   &$i_t$&  Index at which the harvest rate is reduced 
+                             relative to historic levels i.e. 0.7 = 
+                             reduce harvest rate when the biomas index is
+                             at 70\% of historic levels                            & 0.7 \\ 
+  Limit index       &$i_l$&  Index at which harvest rate is zero
+			     relative to historic levels i.e. 0.2 = close the
+			     fishery when the biomas index is at 20% of
+			     historic levels                                       & 0.2 \\ 
+  Maximum change    &$f$&    Maximum allowable percenatge change in
+                             effort                                                & 0.4 \\ 
+  Maximum TAC       &$u$&    Maximum total allowable catch                         & 1000\\ 
+  \hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,42 @@
+The iRate Management Procedure uses CPUE as an index of biomass (I) and sets a total allowable catch or TAC ($\bar{S}$) that, over most of the range of CPUE, is proportional to that index.
+
+In each year a smoothed index ($\bar{I}$) is calculated using an exponential moving average with the responsivesness control parameter, $r$:
+
+\begin{equation}
+\bar{I_t}=rI_t+(1-r)\bar{I}_{t+1}
+\end{equation}
+
+
+Higher values of $r$ produce greater responsiveness because they put more weight on more recent values of CPUE and produce a index that is less smoothed. When $r = 1$ there is no smoothing and $\bar{I_t}=r\bar{I_t}$.
+Smoothing may be advantageous in that it reduces the influence of annual random variation in CPUE due catchability or operational variations. However, smoothing also reduces adds a lag to the index.
+
+Using $\bar{I}$ the recommended catch scaler ($\bar{S}$) is calculated as follows	. 
+
+ 
+\begin{equation}
+\bar{S} = \left\{ \begin{array}{ll}
+	0                   			  &\mbox{$\bar{I} < i_t$} \\
+	m\hat{S}            			  &\mbox{$\bar{I} > i_t$} \\
+	\frac{m\hat{S}}{i_t-i_l}(\bar{I}-i_l)     &\mbox{otherwise}\\
+		  \end{array}
+	  \right.
+\end{equation}
+
+
+The recommended catch scaler is used to calculate the recommended TAC ($\bar{S}$) by multiplying the harvest rate by the biomass index,
+
+\begin{equation}
+\bar{C}=min(\bar{S}\bar{I},u)
+\end{equation}
+
+which is applied to the fishery in the following year,
+
+\begin{equation}
+C_{t+1} = \bar{C}_\phi
+\end{equation}
+
+where $\phi$ is a lognormally distributed multiplicative error with mean of 1 and standard deviation of $\veps$,
+
+\begin{equation}
+\phi \sim LN(1,\veps)
+\end{equation}

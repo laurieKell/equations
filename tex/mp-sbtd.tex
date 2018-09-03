@@ -1,0 +1,20 @@
+A derivative control rule (D) is so called as the control signal is derived from the trend in the signal, i.e. to the derivative of the error. 
+
+
+\begin{equation}
+ TAC^1_{y+1}=TAC_y\times 
+ \left\{\begin{array}{rcl}  
+    {1-k_1|\lambda|^{\gamma}} & \mbox{for} & \lambda<0\\[0.35cm]
+    {1+k_2\lambda} & \mbox{for} & \lambda\geq 0 
+ \end{array}\right.
+\end{equation}
+
+where $\lambda$ is the slope in the regression of $\ln I_y$ against year for the most recent $n$ years and $k_1$ and $k_2$ are \textit{gain} parameters and $\gamma$ actions asymmetry so that decreases in the index do not result in the same relative change as as an increase.
+
+The TAC is then the average of the last TAC and the value output by the HCR. 
+
+\begin{equation} 
+     TAC_{y+1} = 0.5\times\left(TAC_y+C^{\rm targ}_y\right)\\
+\end{equation}
+
+
